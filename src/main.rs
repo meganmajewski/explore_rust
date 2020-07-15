@@ -1,6 +1,7 @@
-#![allow(unused_variable)] //disables warnings for unused variables
+#![allow(unused_variables)] //disables warnings for unused variables
 #![allow(dead_code)] //disables warnings of un-read values or uncalled functions
 mod stackandheap;
+mod logic;
 use std::mem;
 
 const LIFE:u8 = 43; //type is required for consts. It has no fixed address.
@@ -67,8 +68,12 @@ fn scope_and_shadowing() {
 
 }
 fn main() {
-    data_types();
-    operators();
-    scope_and_shadowing();
-    stackandheap::stack_and_heap();
+    // data_types();
+    // operators();
+    // scope_and_shadowing();
+    // stackandheap::stack_and_heap();
+    // logic::if_statement();
+    // logic::while_and_loop();
+    // logic::for_loop();
+    logic::match_statement();
 }
