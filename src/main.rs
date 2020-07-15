@@ -1,4 +1,10 @@
+#![allow(unused_variable)] //disables warnings for unused variables
+#![allow(dead_code)] //disables warnings of un-read values or uncalled functions
+mod stackandheap;
 use std::mem;
+
+const LIFE:u8 = 43; //type is required for consts. It has no fixed address.
+static DEATH:u8 = 123; //defined memory address
 fn data_types(){
     let a:u8 = 123; //unsigned 8 bit memory location
     println!("a = {}", a);
@@ -64,4 +70,5 @@ fn main() {
     data_types();
     operators();
     scope_and_shadowing();
+    stackandheap::stack_and_heap();
 }
