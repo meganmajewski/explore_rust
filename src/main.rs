@@ -24,7 +24,9 @@ fn data_types(){
    
    let g = false; //1 byte but prints true / false;
    println!("g = {}, size = {} bytes", g, mem::size_of_val(&g));
+
    let  f = 4>0; //true
+   println!("f = {}, size = {} bytes", f, mem::size_of_val(&f));
 
 }
 fn operators(){
@@ -45,7 +47,21 @@ fn operators(){
     
 
 }
+fn scope_and_shadowing() {
+    let a = 123;
+    {
+        let b = 456;
+        println!("inside b = {}", b);
+        let a = 999; // two different a variables
+        println!("inside a = {}", a); 
+
+    }
+    //b out here doesn't exist
+    println!("a = {}", a);
+
+}
 fn main() {
     data_types();
     operators();
+    scope_and_shadowing();
 }
